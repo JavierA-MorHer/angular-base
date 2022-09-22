@@ -1,0 +1,21 @@
+<p>BLACKPINK</p>
+
+<button (click)="borrarMiembro()">
+    Borrar
+</button>
+
+<h3 *ngIf=" elementoBorrado.length > 0; else noBorrado  ">Se borro: {{ elementoBorrado }}</h3>
+
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+<ul>
+    <li *ngFor="let member of blackpink">
+        {{ member }}
+    </li>
+</ul>
+
+
+
+
