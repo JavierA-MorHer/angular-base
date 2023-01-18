@@ -1,0 +1,26 @@
+ <!-- Crear componente llamado agregar -->
+ <h3>Agregar</h3>
+ <hr>
+
+ <!-- ngSubmit es un modulo que se importa y sirve para manejar formularios -->
+ <form (ngSubmit)="agregar(  )">
+     <input 
+         type="text" 
+         placeholder="personaje" 
+         name="nombre"
+         [(ngModel)]="nuevo.nombre"
+     >
+     <!-- Forma de extraer y actualizar registros -->
+         <!-- value={{nuevo.nombre}}
+         (input)="cambiarNombre( $event )" -->
+
+     <input 
+         type="number" 
+         placeholder="poder" 
+         [value]="nuevo.poder"
+         name="poder"
+         [(ngModel)]="nuevo.poder"
+     >
+
+     <button type="submit">Agregar</button>
+ </form>
